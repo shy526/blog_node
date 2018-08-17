@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="cn" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--
+        <link rel="stylesheet" href="template/css/reset.css"> &lt;!&ndash; CSS reset &ndash;&gt;
+        <link rel="stylesheet" href="template/css/style.css"> &lt;!&ndash; Resource style &ndash;&gt;
+        <script src="template/js/modernizr.js"></script> &lt;!&ndash; Modernizr &ndash;&gt;-->
+
+    <title>ccxh_博客_目录</title>
+    <link rel="stylesheet" href="template/css/blog_menu.css">
+
+
+</head>
+<body>
+<div class="cd-fold-content single-page">
+    <h2>博客 目录</h2>
+    <em>日常学习和犯错的小记录</em>
+    <ul class="list-style-one">
+        {% for key, val in theme %}
+        <li class="theme">
+            <a href="javascript:void(0)">{{ val.name }}</a>
+          {% if val.sub.length > 0 %}
+                <ul class="list-style-one">
+                    {% for i, v in val.sub %}
+                    <li>
+                       <a href="#">{{ v }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </li>
+        {% endfor %}
+
+    </ul>
+</div>
+</body>
+</body>
+<script>
+   /* alert("1")
+    axios.get('/test?ID=1234')
+        .then(function (respone) {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+
+    var example1 = new Vue({
+        el: '#example-1',
+        data: {
+            items: [
+                {message: 'foo', sub: [1, 2, 3]},
+                {message: 'Bar', sub: [1, 2, 3]}
+            ]
+        }
+    })*/
+</script>
+</html>

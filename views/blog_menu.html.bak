@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="cn" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+	<link rel="stylesheet" href="template/css/reset.css"> &lt;!&ndash; CSS reset &ndash;&gt;
+	<link rel="stylesheet" href="template/css/style.css"> &lt;!&ndash; Resource style &ndash;&gt;
+	<script src="template/js/modernizr.js"></script> &lt;!&ndash; Modernizr &ndash;&gt;-->
+  	
+	<title>ccxh_博客_目录</title>
+
+</head>
+<body>
+	<div class="cd-fold-content single-page">
+		<h2>博客 目录</h2>
+		<em>日常学习和犯错的小记录</em>
+		<li>
+			hadoop
+		</li>
+	</div>
+</body>
+<script src="../public/plugins/vue.js"></script>
+</body>
+<script>
+	
+</script>
+</html>

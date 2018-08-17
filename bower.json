@@ -1,0 +1,22 @@
+{
+  "name": "blog-node",
+  "description": "",
+  "main": "",
+  "authors": [
+    "sunjiaqing <sundada214@outlook.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vue": "^2.5.17",
+    "axios": "^0.18.0"
+  }
+}

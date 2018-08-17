@@ -1,0 +1,16 @@
+.list-style-one{
+    list-style: none;
+    text-decoration:none;
+}
+.list-style-one a{
+    text-decoration:none;
+}
+
+.list-style-one a:visited{
+    color: #42b983;
+}
+
+.list-style-one a:link{
+    color: #ef3f52;
+}
+
