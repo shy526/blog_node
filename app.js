@@ -6,20 +6,21 @@ const logger = require('morgan');
 const setSwig = require('./src/config/swigConfig');
 const indexRouter = require('./src/routes/index');
 const test = require('./src/routes/test');
+const dubbo = require('./src/config/dubboConfig');
 const app = express();
 
 
 setSwig.setSwig(app);
-
-
-
+app.use(dubbo.getDubboService());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
 app.use('/', indexRouter);
 app.use('/test', test);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

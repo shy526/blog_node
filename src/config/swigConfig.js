@@ -1,3 +1,7 @@
+/**
+ * swig 配置
+ * @author ccxh
+ */
 const swig = require('swig');
 const path = require('path');
 function setSwig(app) {
