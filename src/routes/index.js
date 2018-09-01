@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const github=require("../service/github")
 
 /* GET home page. */
 router.get('/blog_menu.html', function(req, res, next) {
