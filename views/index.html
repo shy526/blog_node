@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8"/>
     <title>ccxh-主页</title>
-    <link rel="stylesheet" type="text/css" href="template_a/css/component.css"/>
-    <script src="template_a/js/modernizr.custom.js"></script>
+    <link rel="stylesheet" type="text/css" href="/template_a/css/component.css"/>
+    <script src="/template_a/js/modernizr.custom.js"></script>
 </head>
 <body>
 <div class="container">
@@ -36,15 +36,18 @@
                 <h2 class="bl-icon bl-icon-blog">博客</h2>
             </div>
             <div class="bl-content">
-                <h2>博客-主题-目录</h2>
+                <h2>博客</h2>
                 <article>
-                    <h3>日常学习和犯错的记录</h3>
-                    <p></p>
+                    <h3>{{ describe }}</h3>
+                    <!--减去误差值-->
+                    <p data-createTime="{{ createTime }}">更新时间:{{ createTime|date('Y-m-d H:i:s',-480) }}</p>
                 </article>
-                <article>
-                    <h3>主题名</h3>
-                    <p>主题简介<a href="#">单击 查看</a></p>
+                {% for key, val in themes %}
+                <article data-sha="{{ val.sha }}">
+                    <h3>{{ val.name }}</h3>
+                    <p> {{ val.des|default("暂无简介") }}<a href="themes/{{ val.id }}">单击 查看</a></p>
                 </article>
+                {% endfor %}
             </div>
             <span class="bl-icon bl-icon-close"></span>
         </section>
@@ -60,8 +63,8 @@
         </section>
     </div>
 </div><!-- /container -->
-<script src="template/js/jquery-2.1.1.js"></script>
-<script src="template_a/js/boxlayout.js"></script>
+<script src="/template/js/jquery-2.1.1.js"></script>
+<script src="/template_a/js/boxlayout.js"></script>
 <script>
     $(function () {
         Boxlayout.init();

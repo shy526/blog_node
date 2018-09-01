@@ -8,13 +8,20 @@ const opt = {
     register: "127.0.0.1:2181",
     dubboVer: "2.6.2",
     dependencies: {
-        ThemeService: {
+       ThemeService: {
             interface: 'ccxh.top.service.ThemeService',
             version: '1.0.0',
             timeout: 6000,
             methodSignature: {
-                add: (a, b) => [javaBaseType.String(a), javaBaseType.String(b)]
-
+                thenmePage: (a, b) => [javaBaseType.Integer(a), javaBaseType.Integer(b)]
+            }
+        },
+        MarkdownService: {
+            interface: 'ccxh.top.service.MarkdownService',
+            version: '1.0.0',
+            timeout: 6000,
+            methodSignature: {
+                getMarkdownPageBy: (a) => [javaBaseType.Integer(a)]
             }
         }
     },
