@@ -12,7 +12,7 @@ router.get('/blog_menu.html', function(req, res, next) {
 
 });
 router.get('/', function(req, res, next) {
-
+    console.info("index")
     let dubboService = req.getDubboService("ThemeService");
     dubboService.thenmePage(1,100).then(data=>{
         console.log({themes:data.data})
