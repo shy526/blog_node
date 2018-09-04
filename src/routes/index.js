@@ -30,7 +30,6 @@ router.get('/themes/:id', function(req, res, next) {
             for (let i=0;i<length;i++){
                 data.data.push({name:'没有多余的数据了'})
             }
-
         }
      res.render('blog/index',{markdowns:data.data});
     }).catch(err=>console.log(err))

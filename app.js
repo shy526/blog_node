@@ -9,7 +9,12 @@ const test = require('./src/routes/test');
 const dubbo = require('./src/config/dubboConfig');
 const app = express();
 
-
+/**
+ * 异步异常捕获,防止应用崩溃
+ */
+process.on('uncaughtException', function (err) {
+    console.log('Caught exception: ', err);
+});
 setSwig.setSwig(app);
 app.use(dubbo.getDubboService());
 app.use(logger('dev'));
