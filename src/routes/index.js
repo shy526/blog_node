@@ -28,7 +28,7 @@ router.get('/themes/:id', function(req, res, next) {
         if (data.data.length<4){
             let length=4-data.data.length;
             for (let i=0;i<length;i++){
-                data.data.push({name:'没有多余的数据了',showUrl:"javascript:void(0)"})
+                data.data.push({name:'没有多余的数据了',showUrl:"javascript:void(0)"} )
             }
         }
         while ( !data.data.length%2==0 ){
