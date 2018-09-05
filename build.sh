@@ -50,7 +50,7 @@ fi
 
 
 info_log "拉取新文件"
-GIT_DIR=/home/project/node/blog/blog_node/.git git pull
+`GIT_DIR=/home/project/node/blog/blog_node/.git git pull`
 info_log "下载mod"
 npm install
 
