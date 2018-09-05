@@ -45,7 +45,7 @@
                 {% for key, val in themes %}
                 <article data-sha="{{ val.sha }}">
                     <h3>{{ val.name }}</h3>
-                    <p> {{ val.des|default("暂无简介") }}<a href="themes/{{ val.id }}">单击 查看</a></p>
+                    <p> {{ val.des|default("暂无简介") }}<a href="themes/{{ val.id }}" target="_blank">单击 查看</a></p>
                 </article>
                 {% endfor %}
             </div>
