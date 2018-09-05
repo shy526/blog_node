@@ -31,7 +31,7 @@ router.get('/themes/:id', function(req, res, next) {
                 data.data.push({name:'没有多余的数据了',showUrl:"javascript:void(0)"} )
             }
         }
-        while ( !data.data.length%2==0 ){
+        while ( !data.data.length%2!=0 ){
             //非偶数填充数据
             data.data.push({name:'没有多余的数据了',showUrl:"javascript:void(0)"})
         }
