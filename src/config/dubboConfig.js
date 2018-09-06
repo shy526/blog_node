@@ -23,8 +23,16 @@ const opt = {
             methodSignature: {
                 getMarkdownPageBy: (a) => [javaBaseType.Integer(a)]
             }
+        },
+        UserService:{
+            interface: 'ccxh.top.service.UserService',
+            version: '1.0.0',
+            timeout: 6000,
+            methodSignature: {
+                findUserByid: (a) => [javaBaseType.Integer(a)]
+            }
         }
-    },
+    }
 }
 
 const Dubbo = new nzd(opt);

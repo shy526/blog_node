@@ -12,12 +12,15 @@ router.get('/blog_menu.html', function(req, res, next) {
 
 });
 router.get('/', function(req, res, next) {
-    console.info("index")
-    let dubboService = req.getDubboService("ThemeService");
-    dubboService.thenmePage(1,100).then(data=>{
-        console.log({themes:data.data})
-        res.render('index',{themes:data.data});
+    let themeService = req.getDubboService("ThemeService");
+    let userService = req.getDubboService("UserService");
+    userService.findUserByid(13).then(data=>{
+        themeService.thenmePage(1,100).then(theme=>{
+            res.render('index',{themes:theme.data,describe:data.data.repotDes,createTime:data.data.updateTime});
+        }).catch(err=>console.log(err));
     }).catch(err=>console.log(err));
+
+
 });
 //主题目录
 router.get('/themes/:id', function(req, res, next) {
