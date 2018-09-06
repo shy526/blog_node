@@ -16,7 +16,7 @@
 		<ul class="cd-gallery">
 			{% for key, val in markdowns %}
 			<li class="cd-item">
-				<a href="{{ val.showUrl }}">
+				<a href="{{ val.showUrl | replace(' ','%20') }}">
 					<div>
 						<h2>{{ val.name }}</h2>
 						{% if val.name !=== '没有多余的数据了' %}
